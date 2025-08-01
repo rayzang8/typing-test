@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打字练习小游戏</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="settings">
+        <h2>设置</h2>
+        <label for="characters">练习字符:</label>
+        <textarea id="characters" rows="4" cols="50"></textarea>
+        <div>
+            <label>选择模式:</label>
+            <input type="radio" id="mode-char" name="mode" value="char" checked>
+            <label for="mode-char">字符练习</label>
+            <input type="radio" id="mode-wb" name="mode" value="wb">
+            <label for="mode-wb">五笔练习</label>
+        </div>
+        <button id="save-characters">保存字符</button>
+        <button id="start-button">开始游戏</button>
+    
+        <!-- 动态添加键值对的区域 -->
+        <div id="wb-mapping-container">
+            <h3>添加五笔编码映射</h3>
+            <button id="add-mapping">添加键值对</button>
+            <div id="mapping-fields"></div>
+            <button id="save-mapping">保存映射</button>
+        </div>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <div id="game-screen">
+            <div id="character"></div>
+            <div id="hint-area"></div>
+            <button id="hint-button">提示 (Ctrl + H)</button>
+            <button id="skip-button">跳过 (Ctrl + S)</button>
+        </div>
+       <p><input type="text" id="hidden-input"></p>
+        <div id="stats">
+            <p>速度: <span id="speed">0</span> 字符/分钟</p>
+            <p>正确率: <span id="accuracy">100%</span></p>
+        </div>
+        <button id="end-button">结束游戏</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

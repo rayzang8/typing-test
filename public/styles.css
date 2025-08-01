@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+#settings {
+  text-align: center;
+}
+
+#game-container {
+  text-align: center;
+}
+
+#game-screen {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+#character {
+  position: absolute;
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+#hint-area {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #666;
+}
+
+#stats {
+  margin-top: 20px;
+}
+
+/* 动画效果 */
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes shrink {
+  from { transform: scale(1); }
+  to { transform: scale(0); }
+}
+
+@keyframes rotateOut {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); opacity: 0; }
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-50px); opacity: 0; }
+}
+
+/* 动画类 */
+.animate-fade-out {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+.animate-shrink {
+  animation: shrink 0.5s ease-in-out forwards;
+}
+
+.animate-rotate-out {
+  animation: rotateOut 0.5s ease-in-out forwards;
+}
+
+.animate-float-up {
+  animation: floatUp 0.5s ease-in-out forwards;
+}
